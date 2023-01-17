@@ -4,34 +4,37 @@ let note = document.getElementById("giris");
 let add = document.getElementById("add");
 let clear = document.getElementById("clear");
 
+
 add.addEventListener('click', function(){
 
     if((note.value).length==0){
         alert("Lütfen Değer Giriniz")
     }else{
-        let paragraph = document.createElement("p");
-        paragraph.classList.add("eklemeSonuc");
-       todocikti.appendChild(paragraph);
-       paragraph.innerHTML = note.value;
-       note.value ="";
+        let paragraf = document.createElement("p"); 
+        paragraf.classList.add("eklemeSonuc"); 
+        todocikti.appendChild(paragraf);
+        paragraf.innerHTML = note.value;
+        note.value ="";
     
       todocikti.style.marginTop ="10px";
     
-      paragraph.addEventListener("click", function(){
+      paragraf.addEventListener("click", function(){
     
-        paragraph.style.textDecoration ="line-through";
-        paragraph.style.opacity = "0.8";
-        paragraph.style.color="#778899";
+        paragraf.style.textDecoration ="line-through";
+        paragraf.style.opacity = "0.8";
+        paragraf.style.color="#778899";
+
     
-        paragraph.addEventListener("dblclick", function(){
-            todocikti.removeChild(paragraph);
+        paragraf.addEventListener("dblclick", function(){  
+            todocikti.removeChild(paragraf);
         })
       })
     
     clear.addEventListener("click", function(){
-        paragraph.remove();
+        paragraf.remove();
     })
     }
 })
 
-    
+
+
