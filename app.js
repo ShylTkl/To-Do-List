@@ -1,16 +1,17 @@
-
 let cikti = document.getElementById("todocikti");
 let note = document.getElementById("giris");
 let add = document.getElementById("add");
 let clear = document.getElementById("clear");
 
+window.addEventListener("keyup", (e) => {
+    e.code === "Enter" && add.click();
+  });
 
-add.addEventListener('click', function(){
-
+add.onclick=function(){
     if((note.value).length==0){
         alert("Lütfen Değer Giriniz")
     }else{
-        let paragraf = document.createElement("p"); 
+        let paragraf = document.createElement("li"); 
         paragraf.classList.add("eklemeSonuc"); 
         todocikti.appendChild(paragraf);
         paragraf.innerHTML = note.value;
@@ -25,16 +26,15 @@ add.addEventListener('click', function(){
         paragraf.style.color="#778899";
 
     
-        paragraf.addEventListener("dblclick", function(){  
-            todocikti.removeChild(paragraf);
-        })
-      })
+    })
+    paragraf.addEventListener("dblclick", function(){  
+        todocikti.removeChild(paragraf);
+    })
     
     clear.addEventListener("click", function(){
         paragraf.remove();
     })
     }
-})
-
+}
 
 
