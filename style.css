@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, rgba(136,221,191,1) 16%, rgba(126,168,187,1) 67%, rgba(24,42,62,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sabit{
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.image{
+    width: 75px;
+}
+
+.govde{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    border: none;
+}
+
+#giris {
+    height: 40px;
+    width: 230px;
+    margin-right: 5px;
+}
+
+#add{
+    height: 40px;
+    width: 50px;
+    margin-right: 5px;
+}
+
+#clear{
+    height: 40px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.body{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    background-color: #cda4a40f;
+    height: 80vh;
+}
+
+
+#clear:hover{
+    background-color: rgb(220, 102, 102);
+    cursor: pointer;
+    color: rgb(6, 6, 6);
+    transition: 1s;
+}
+
+#add:hover{
+    background-color: rgb(220, 102, 102);
+    cursor: pointer;
+    color: rgb(6, 6, 6);
+    transition: 1s;
+}
+
+.eklemeSonuc{
+    margin-top: 20px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 24px;
+    color:black;
+    text-transform: capitalize;
+}
+
+
